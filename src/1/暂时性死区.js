@@ -8,3 +8,4 @@ if (true) {
     tmp = 123;
     console.log(tmp);   // 123
 }
+
