@@ -1,26 +1,17 @@
-function f1() {
-    let n = 5;
+/**
+ * Created by wzp on 2018/3/2.
+ */
+/*
+    函数可以在块级作用域中声明
+ */
+function f() {
+    console.log('123')
+}
+(function () {
     if (true) {
-        let n = 10;
+        function f() {
+            console.log('声明函数');
+        }
     }
-    console.log(n);
-}
-f1()    // 5
-// ---------------------运行块级作用域的任意嵌套--------------------
-
-{
-    let aa = 2;
-    {
-        let aa = 1;
-        console.log(aa);
-    }
-    console.log(aa);
-}
-
-{
-    let a = 'secret';
-    // 这种写法叫做函数表达式
-    let f = () => a;
-    console.log(f());
-}
-
+    f();
+}());

@@ -1,0 +1,1 @@
+Promise.resolve('foo').then(value => console.log(value));
